@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kasjer"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Kasjer 3.0" 
-        Height="600" 
-        Width="300">
+        Height="620" 
+        Width="390">
+    <!-- Znalezione na stacku ale nie pozwala użyć z powodu .Resources 
+    <Application.Resources>
+        <Style TargetType="TextBox">
+            <EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotKeyboardFocus" />
+        </Style>
+    </Application.Resources>
+    -->
     <StackPanel>
         <TextBlock x:Name="Suma0" Text="" TextAlignment="Center"/>
         <TextBlock x:Name="Suma" FontSize="24" Text="Suma" TextAlignment="Center"/>
@@ -59,53 +67,54 @@
             <Label Content="0.02"   HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="14" />
             <Label Content="0.01"   HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="15" />
 
-            <TextBox x:Name="K_50000"    Grid.Column="1" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_20000"    Grid.Column="1" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_10000"    Grid.Column="1" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_5000"     Grid.Column="1" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_2000"     Grid.Column="1" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_1000"     Grid.Column="1" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_500"      Grid.Column="1" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_200"      Grid.Column="1" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_100"      Grid.Column="1" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_50"       Grid.Column="1" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_20"       Grid.Column="1" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_10"       Grid.Column="1" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_5"        Grid.Column="1" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_2"        Grid.Column="1" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="K_1"        Grid.Column="1" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-                                                                                                                                  
-            <TextBox x:Name="Kasa_50000" Grid.Column="2" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_20000" Grid.Column="2" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_10000" Grid.Column="2" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_5000"  Grid.Column="2" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_2000"  Grid.Column="2" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_1000"  Grid.Column="2" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_500"   Grid.Column="2" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_200"   Grid.Column="2" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_100"   Grid.Column="2" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_50"    Grid.Column="2" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_20"    Grid.Column="2" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_10"    Grid.Column="2" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_5"     Grid.Column="2" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_2"     Grid.Column="2" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Kasa_1"     Grid.Column="2" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-                                                                                                                                  
-            <TextBox x:Name="Sejf_50000" Grid.Column="3" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_20000" Grid.Column="3" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_10000" Grid.Column="3" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_5000"  Grid.Column="3" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_2000"  Grid.Column="3" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_1000"  Grid.Column="3" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_500"   Grid.Column="3" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_200"   Grid.Column="3" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_100"   Grid.Column="3" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_50"    Grid.Column="3" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_20"    Grid.Column="3" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_10"    Grid.Column="3" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_5"     Grid.Column="3" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_2"     Grid.Column="3" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
-            <TextBox x:Name="Sejf_1"     Grid.Column="3" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" />
+            <TextBox x:Name="K_50000"    Grid.Column="1" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_20000"    Grid.Column="1" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_10000"    Grid.Column="1" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_5000"     Grid.Column="1" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_2000"     Grid.Column="1" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_1000"     Grid.Column="1" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_500"      Grid.Column="1" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_200"      Grid.Column="1" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_100"      Grid.Column="1" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_50"       Grid.Column="1" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_20"       Grid.Column="1" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_10"       Grid.Column="1" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_5"        Grid.Column="1" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_2"        Grid.Column="1" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            <TextBox x:Name="K_1"        Grid.Column="1" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_K" InputScope="Digits" />
+            
+            <TextBox x:Name="Kasa_50000" Grid.Column="2" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_20000" Grid.Column="2" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_10000" Grid.Column="2" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_5000"  Grid.Column="2" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_2000"  Grid.Column="2" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_1000"  Grid.Column="2" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_500"   Grid.Column="2" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_200"   Grid.Column="2" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_100"   Grid.Column="2" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_50"    Grid.Column="2" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_20"    Grid.Column="2" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_10"    Grid.Column="2" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_5"     Grid.Column="2" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_2"     Grid.Column="2" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+            <TextBox x:Name="Kasa_1"     Grid.Column="2" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Kasa" InputScope="Digits" />
+
+            <TextBox x:Name="Sejf_50000" Grid.Column="3" Grid.Row="1"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_20000" Grid.Column="3" Grid.Row="2"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_10000" Grid.Column="3" Grid.Row="3"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_5000"  Grid.Column="3" Grid.Row="4"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_2000"  Grid.Column="3" Grid.Row="5"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_1000"  Grid.Column="3" Grid.Row="6"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_500"   Grid.Column="3" Grid.Row="7"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_200"   Grid.Column="3" Grid.Row="8"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_100"   Grid.Column="3" Grid.Row="9"  Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_50"    Grid.Column="3" Grid.Row="10" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_20"    Grid.Column="3" Grid.Row="11" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_10"    Grid.Column="3" Grid.Row="12" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_5"     Grid.Column="3" Grid.Row="13" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_2"     Grid.Column="3" Grid.Row="14" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            <TextBox x:Name="Sejf_1"     Grid.Column="3" Grid.Row="15" Margin="2" TextAlignment="Right" VerticalAlignment="Center" Width="60" AcceptsTab="False" Text="0" GotKeyboardFocus="TextBox_GotKeyboardFocus" LostKeyboardFocus="Przelicz_Click_Sejf" InputScope="Digits" />
+            
         </Grid>
             <StackPanel Grid.Row="1">
                 <Grid >
@@ -123,5 +132,17 @@
         <TextBox x:Name="NumerDokumentu" Text="Numer Dokumentu" Margin="15 0 15 5"/>
         <Button x:Name="Przelicz" Click="Przelicz_Click" Content="Przelicz" Margin="2 2 2 0 "/>
         <Button x:Name="Drukuj" Click="Drukuj_Click" Content="Drukuj" Margin="2 2 2 0"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        <Button Grid.Column="0" x:Name="Wypelnij" Click="Wypelnij_Click" Content="Wypelnij" Margin="2 2 2 0"/>
+        <Button Grid.Column="1" x:Name="Wyzeruj" Click="Wyzeruj_Click"  Content="Wyzeruj" Margin="2 2 2 0"/>
+        </Grid>
     </StackPanel>
+    
 </Window>
